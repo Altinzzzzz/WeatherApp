@@ -1,0 +1,149 @@
+:root{
+    --text-color: white;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Alkatra', montserrat, sans-serif;
+}
+
+
+body{
+    background-image: url('https://wallpaperaccess.com/full/1579893.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    overflow: hidden;
+    padding-bottom: 20px;
+}
+
+main{
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    > div{
+        display: flex;
+        flex-direction: row;
+        height: 40%;
+        width: 95%;
+        
+        > *{
+            flex: 1;
+            color: var(--text-color);
+        }  
+        
+        .leftClassMI{
+            padding: 30px;
+            
+            #weather_description{
+                font-size: 2.2em;
+                margin-bottom: 2%;
+            }
+
+            #weather_city{
+                font-size: 1.7em;
+                margin-bottom: 2%;
+            }
+
+            .timeBox{
+                margin-bottom: 6%;
+                
+                *{
+                    font-size: 1.4em;
+                }
+            }
+
+            #weather_temp{
+                margin-bottom: 0;
+                font-size: 3.8em;
+            }
+
+            #weather_dailyImg{
+                width: 20%;
+            }
+        }
+
+        .middleClassMI{
+            display: flex;
+            justify-content: center;
+
+            form{
+                margin-top: 20px;
+                width: 50%;
+                border-bottom: 1px solid whitesmoke;
+                margin-bottom: auto;
+
+                div{
+                    display: flex;
+                    justify-content: center;
+                    height: 30px;
+                    padding-bottom: 2px;
+
+                    input{
+                        width: 100%;
+                        border: 0;
+                        background-color: transparent;
+                        color: white;
+                        font-size: 1.1em;
+                        letter-spacing: 1px;
+                    }
+
+                    input::placeholder{
+                        color: white;
+                    }
+
+                    button{
+                        background-color: transparent;
+                        border: none;       
+                    }
+                }
+            }
+        }
+
+        .rightClassMI{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            justify-content: center;
+
+            > div{
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+
+                > div{
+                    display: flex;
+                    flex-direction: row;
+                    gap: 20px;
+
+                    *{
+                        p{
+                            font-size: 1.2em;
+                        }
+
+                        h1{
+                            font-size: 1.6em;
+                        }
+                    }
+
+                    > div:first-child{
+                        width: 30%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+
+                    > div:nth-child(2){
+                        width: 70%;
+                    }
+                }
+            }
+        }
+    }
+}

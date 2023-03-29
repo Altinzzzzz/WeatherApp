@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherApp</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Alkatra:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <script src = 'https://kit.fontawesome.com/1c51622130.js' crossorigin = 'anonymous'></script>
+    <script src = 'logic.js' defer></script>
+</head>
+<body>
+    <main>
+        <div class = 'mainInformation'>
+            <div class="leftClassMI">
+                <h3 id = 'weather_description'>Description</h3>
+                <p id = 'weather_city'>City</p>
+                <div class = 'timeBox'>
+                    <p id = 'weather_date'>Date</p>
+                    <p id = 'weather_time'>Time</p>
+                </div>
+                <h1 id = 'weather_temp'>Temp</h1>
+                <img id = 'weather_dailyImg' src = '' alt = 'Logo' />
+            </div>
+            <div class="middleClassMI">
+                <form method = 'get' action = "" id = 'mainForm' onsubmit = 'return false'>
+                    <div>
+                        <input type = 'text' id = 'locationInput' placeholder = "Search Location..." />
+                        <button type="submit" id = 'searchLocation'>
+                            <i class="fa fa-solid fa-magnifying-glass fa-2xl" style="color: #ffffff;"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <div class="rightClassMI">
+                <div class = 'rightDiv'>
+                    <div>
+                        <div>
+                            <i class="fa-solid fa-temperature-high fa-3x" style="color: #ffffff;"></i>
+                        </div>
+                        <div>
+                            <p> Max Temp </p>
+                            <h1 id = 'weather_maxTemp'>?</h1>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <i class="fa-solid fa-temperature-low fa-3x" style="color: #ffffff;"></i>
+                        </div>
+                        <div>
+                            <p> Min Temp </p>
+                            <h1 id = 'weather_minTemp'>?</h1>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <i class="fa-solid fa-wind fa-3x" style = 'color: white'></i>
+                        </div>
+                        <div>
+                            <p> Wind Speed </p>
+                            <h1 id = 'weather_windSpeed'>?</h1>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <i class="fa-solid fa-droplet fa-3x"></i>
+                        </div>
+                        <div>
+                            <p> Humidity </p>
+                            <h1 id = 'weather_humidity'>?</h1>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <i class="fa-solid fa-cloud-rain fa-3x" style="color: #ffffff;"></i>
+                        </div>
+                        <div>
+                            <p> Rain? </p>
+                            <h1 id = 'weather_rain'>?</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="timeInformation">
+        </div>
+    </main>
+</body>
+</html>
