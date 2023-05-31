@@ -58,7 +58,7 @@ form.addEventListener('submit', () => {
 });
 
 async function doFunc(location) {
-    const respone = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=4c8dd7726b11412f81e123535232703&q=${location}&days=8&aqi=no&alerts=no`);
+    const respone = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=4c8dd7726b11412f81e123535232703&q=${location}&days=8&aqi=no&alerts=no`);
     firstDone = await respone.json();
     assignAll(firstDone);
 }
