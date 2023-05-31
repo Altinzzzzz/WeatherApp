@@ -27,7 +27,6 @@ var days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturda
 
 function updateFromSpan(span){
     for(let child of hourContainer.children){
-        console.log(child);
         if(child.id.slice(-1) == span.id.slice(-1)){
             child.style.display = 'flex';
             span.style.color = 'black';
@@ -65,6 +64,7 @@ async function doFunc(location) {
 }
 
 function assignAll(response){
+    console.log(response);
     assignFirstDay(response);
 
     for(let element of dayContainer.children){
@@ -100,7 +100,7 @@ function addCelcius(temp){
 
 function setDay(dayElement, response){
     let day_id = dayElement.id.slice(-1);
-    let chosen_day = response.forecast.forecastday[day_id];    
+    let chosen_day = response.forecast.forecastday[day_id-1];    
     let day_name = dayElement.getElementsByTagName('h5')[0];
     let day_maxTemp = dayElement.getElementsByTagName('h3')[0];
     let day_minTemp = dayElement.getElementsByTagName('p')[0];
